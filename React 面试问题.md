@@ -17,22 +17,27 @@
 | 4. DOM  manipulation is very expensive.   | 4. DOM  manipulation is very easy.      |
 | 5. Too much of  memory wastage.           | 5. No memory  wastage.                  |
 
+
+
 ###	2.什么是React？
 
-- React     是     Facebook 于     2011 年开发的前端     JavaScript 库。
-- 它遵循基于组件的方法，有助于构建可重用的     UI 组件。
-- 它用于开发复杂的交互式     Web 和移动     UI。
-- 尽管它仅在     2015 年才开源，但它拥有支持它的最大社区之一。
+- React是Facebook 于2011 年开发的前端 JavaScript 库。
+- 它遵循基于组件的方法，有助于构建可重用的UI 组件。
+- 它用于开发复杂的交互式Web 和移动UI。
+- 尽管它仅在2015 年才开源，但它拥有支持它的最大社区之一。
 
-- React is a front-end JavaScript library     developed by Facebook in 2011.
+- React is a front-end JavaScript library developed by Facebook in 2011.
 
-- It follows the component-based     approach which helps in building reusable UI components.
+- It follows the component-based approach which helps in building reusable UI components.
 
-- It is used for     developing complex and interactive web and mobile UI.
+- It is used for developing complex and interactive web and mobile UI.
 
-- Even though it was open     sourced only in 2015, it has one of the largest communities supporting it.
+- Even though it was open sourced only in 2015, it has one of the largest communities supporting it.
+
+
 
 ###	3. React 有什么特点？
+
 React 的主要特点如下：
 i.	它使用虚拟DOM而不是真实DOM。
 ii.	它使用服务器端渲染。
@@ -41,7 +46,11 @@ Major features of React are listed below:
 i.	It uses the virtual DOM instead of the real DOM.
 ii.	It uses server-side rendering.
 iii.	It follows uni-directional data flow or data binding.
+
+
+
 ###	4. 列出 React 的一些主要优点。
+
 React 的一些主要优点是：
 i.	它提高了应用程序的性能
 ii.	它可以方便地在客户端和服务器端使用
@@ -54,19 +63,23 @@ iii.	Because of JSX, code’s readability increases
 iv.	React is easy to integrate with other frameworks like Meteor, Angular, etc
 v.	Using React, writing UI test cases become extremely easy
 
+
+
 ###	**5**. React 的**局限性**是什么？
 
 React 的限制如下：
 
-1. React     只是一个库，而不是一个成熟的框架
+1. React只是一个库，而不是一个成熟的框架
 2. 它的库很大，需要时间去理解
 3. 对于新手程序员来说理解起来可能有点困难
-4. 编码变得复杂，因为它使用内联模板和     JSX
+4. 编码变得复杂，因为它使用内联模板和JSX
 
-1. React     is just a library, not a full-blown framework
-2. Its library is very     large and takes time to understand
-3. It can be little     difficult for the novice programmers to understand
-4. Coding gets complex as     it uses inline templating and JSX
+1. React is just a library, not a full-blown framework
+2. Its library is very large and takes time to understand
+3. It can be little difficult for the novice programmers to understand
+4. Coding gets complex as it uses inline templating and JSX
+
+
 
 ### 6.什么是JSX？
 
@@ -74,7 +87,21 @@ JSX 是 JavaScript XML 的简写。这是 React 使用的一种文件类型，�
 
 **JSX** is a shorthand for JavaScript XML. This is a type of file used by React which utilizes the expressiveness of JavaScript along with HTML like template syntax. This makes the HTML file really easy to understand. This file makes applications robust and boosts its performance. Below is an example of JSX:
 
-![image-20220204001136527](/Users/jerry/Library/Application Support/typora-user-images/image-20220204001136527.png)
+```js
+render(){
+    return(        
+          
+<div>
+             
+<h1> Hello World from Edureka!!</h1>
+ 
+         </div>
+ 
+    );
+}
+```
+
+
 
 ###	**7.** **Virtual DOM** **你是怎么理解的？解释其如何工作。**
 
@@ -82,11 +109,19 @@ JSX 是 JavaScript XML 的简写。这是 React 使用的一种文件类型，�
 
 A virtual DOM is a lightweight JavaScript object which originally is just a copy of the real DOM. It is a node tree that lists the elements, their attributes and content as Objects and their properties. React’s render function creates a node tree out of the React components. It then updates this tree in response to the mutations in the data model which is caused by various actions done by the user or by the system. This Virtual DOM works in three simple steps.
 
-1. 每当任何底层数据发生变化时，整个 UI 都会以 Virtual DOM 表示形式重新呈现。![虚拟 DOM 1 - 什么是 ReactJS？ - 埃杜里卡](file:////Users/jerry/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.png)
+1. 每当任何底层数据发生变化时，整个 UI 都会以 Virtual DOM 表示形式重新呈现。
 
-2. 然后计算前一个 DOM 表示和新的表示之间的差异。![Virtual DOM 2 - React 面试问题 - Edureka](file:////Users/jerry/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.png)
+   ![7-1](/Users/jerry/Desktop/面试/react面试宝典/react--interview-point/图库/7-1.png)
 
-3. 一旦计算完成，真实的 DOM 将只更新实际发生变化的内容。 ![Virtual DOM 3 - React 面试问题 - Edureka](file:////Users/jerry/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.png)
+2. 然后计算前一个 DOM 表示和新的表示之间的差异。
+
+   ![7-2](/Users/jerry/Desktop/面试/react面试宝典/react--interview-point/图库/7-2.png)
+
+3. 一旦计算完成，真实的 DOM 将只更新实际发生变化的内容。 
+
+   ![7-3](/Users/jerry/Desktop/面试/react面试宝典/react--interview-point/图库/7-3.png)
+
+
 
 ###	8. 为什么浏览器不能读取 JSX?
 
@@ -96,30 +131,110 @@ Browsers can only read JavaScript objects but JSX in not a regular JavaScript ob
 
  
 
-### **9.** **与** **ES5** **相比，****React** **的** **ES6** **语法有何不同？**
+### 9. 与 ES5 相比，React 的 ES6 语法有何不同？
 
 从 ES5 到 ES6 的语法在以下几个方面发生了变化：
 
  i.   require vs **import**
 
-![image-20220204002446123](/Users/jerry/Library/Application Support/typora-user-images/image-20220204002446123.png)
+```js
+// ES5
+var React = require('react');
+ 
+// ES6
+import React from 'react';
+```
 
-ii.	export vs exports
+ii.	**export** vs exports
 
-![image-20220204002616715](/Users/jerry/Library/Application Support/typora-user-images/image-20220204002616715.png)
-iii.	component and function
+```js
+// ES5
+module.exports = Component;
+ 
+// ES6
+export default Component;
+```
 
-![image-20220204002727539](/Users/jerry/Library/Application Support/typora-user-images/image-20220204002727539.png)
+iii.	**component** and function
 
-iv.	Props
+```js
+// ES5
+var MyComponent = React.createClass({
+    render: function() {
+        return
+ 
+<h3>Hello Edureka!</h3>
+;
+    }
+});
+ 
+// ES6
+class MyComponent extends React.Component {
+    render() {
+        return
+ 
+<h3>Hello Edureka!</h3>
+;
+    }
+}
+```
 
+iv.	**Props**
 
+```js
+// ES5
+var App = React.createClass({
+    propTypes: { name: React.PropTypes.string },
+    render: function() {
+        return
+ 
+<h3>Hello, {this.props.name}!</h3>
+;
+    }
+});
+ 
+// ES6
+class App extends React.Component {
+    render() {
+        return
+ 
+<h3>Hello, {this.props.name}!</h3>
+;
+    }
+}
+```
 
-![image-20220204002839411](/Users/jerry/Library/Application Support/typora-user-images/image-20220204002839411.png)
+v.	**State**
 
-v.	State
+```js
+// ES5
+var App = React.createClass({
+    getInitialState: function() {
+        return { name: 'world' };
+    },
+    render: function() {
+        return
+ 
+<h3>Hello, {this.state.name}!</h3>
+;
+    }
+});
+ 
+// ES6
+class App extends React.Component {
+    constructor() {
+        super();
+        this.state = { name: 'world' };
+    }
+    render() {
+        return
+ 
+<h3>Hello, {this.state.name}!</h3>
+;
+    }
+}
+```
 
-![image-20220204002853767](/Users/jerry/Library/Application Support/typora-user-images/image-20220204002853767.png)
 
 
 ### **10. React** **与** **Angular** **有何不同？**
@@ -133,6 +248,8 @@ v.	State
 | *5.* *调试*     | 编译时调试    | 运行时调试     |
 | *6.* *作者*     | Facebook      | 谷歌           |
 
+##	
+
 ##	**React** **组件** **——React** **面试问题**
 
 ### 11. 解释“在 React 中，一切都是组件。” 。
@@ -141,15 +258,43 @@ v.	State
 
 Components are the building blocks of a React application’s UI. These components split up the entire UI into small independent and reusable pieces. Then it renders each of these components independent of each other without affecting the rest of the UI.
 
+
+
 ### 12. React中render()的作用是什么。
 
 每个 React 组件都必须强制有一个render() 。它返回一个单一的 React 元素，它是原生 DOM 组件的表示。如果需要渲染多个 HTML 元素，则必须将它们组合在一个封闭标记中，例如<form>、<group>、<div>等。此函数必须保持纯正，即它必须返回相同的结果每次调用它。
 
 Each React component must have a render() mandatorily. It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag such as <form>, <group>, <div> etc. This function must be kept pure i.e., it must return the same result each time it is invoked.
 
+
+
 ### **13.** **如何将两个或多个组件嵌入到一个组件中？**
 
-![image-20220204002936865](/Users/jerry/Library/Application Support/typora-user-images/image-20220204002936865.png)
+```js
+class MyComponent extends React.Component{
+  render(){
+      return(               
+    <div>
+      <h1>Hello</h1>
+      <Header/>
+     </div>
+   );
+  }
+}
+
+class Header extends React.Component{
+  render(){
+    return
+    <h1>Header Component</h1>
+ };
+}
+
+ReactDOM.render(
+    <MyComponent/>, document.getElementById('content')
+);
+```
+
+
 
 ### 14.什么是Props?
 
@@ -157,7 +302,27 @@ Props 是 React 中properties的简写。它们是只读组件，必须保持纯
 
 Props is the shorthand for Properties in React. They are read-only components which must be kept pure i.e. immutable. They are always passed down from the parent to the child components throughout the application. A child component can never send a prop back to the parent component. This help in maintaining the unidirectional data flow and are generally used to render the dynamically generated data.
 
- 
+ **Props**是 React 组件的输入。它们是单个值或包含一组值的对象，这些值在创建时使用类似于 HTML 标记属性的命名约定传递给 React 组件。即，*它们是从父组件传递到子组件的数据*
+
+React 中 props 的主要目的是提供以下组件功能：
+
+1. 将自定义数据传递给您的 React 组件。
+2. 触发`state`变化。
+3. 通过`this.props.reactProp`内部组件的`render()`方法使用。
+
+例如，让我们创建一个带有 reactProp 属性的元素，
+
+```js
+ <Element reactProp = "1" />
+```
+
+这个`reactProp`（或任何你想出来的）名称然后成为附加到 React 的本机 props 对象的属性，该对象最初已经存在于使用 React 库创建的所有组件上。
+
+```js
+ props.reactProp;
+```
+
+
 
 ### **15. React** **中的状态是什么，它是如何使用的？**
 
@@ -195,7 +360,32 @@ States are the heart of React components. States are the source of data and must
 
 可以使用 this.setState() 更新组件的状态。
 
-![image-20220204003405303](/Users/jerry/Library/Application Support/typora-user-images/image-20220204003405303.png)
+```js
+class MyComponent extends React.Component {
+  constructor() {
+      super();
+      this.state = {
+          name: 'Maxx',
+          id: '101'
+      }
+  }
+    render()
+    {
+        setTimeout(()=>{this.setState({name:'Jaeha', id:'222'})},2000)
+        return (                                  
+    <div>
+    <h1>Hello {this.state.name}</h1>
+    <h2>Your Id is {this.state.id}</h2>
+                   </div>
+            );
+        }
+    }
+ReactDOM.render(
+    <MyComponent/>, document.getElementById('content')
+);
+```
+
+
 
 ### 18. React 中的箭头函数是什么？它是如何使用的？
 
@@ -203,7 +393,7 @@ States are the heart of React components. States are the source of data and must
 
 **Arrow functions** are more of brief syntax for writing the function expression. They are also called *‘fat arrow*‘ (**=>**) the functions. These functions allow to bind the context of the components properly since in ES6 auto binding is not available by default. Arrow functions are mostly useful while working with the higher order functions.
 
-![image-20220204003501961](/Users/jerry/Library/Application Support/typora-user-images/image-20220204003501961.png)
+
 
 ### 19. 区分有状态和无状态组件。
 
@@ -289,7 +479,23 @@ The event argument contains a set of properties, which are specific to an event.
 
 ### 23. 如何在 React 中创建事件？
 
-![image-20220204003807328](/Users/jerry/Library/Application Support/typora-user-images/image-20220204003807328.png)
+```js
+class Display extends React.Component({    
+    show(evt) {
+        // code   
+    },   
+    render() {      
+        // Render the div with an onClick prop (value is a function)        
+        return (            
+           
+<div onClick={this.show}>Click Me!</div>
+ 
+        );    
+    }
+});
+```
+
+
 
 ### **24. React** **中的合成事件是什么？**
 
@@ -297,13 +503,36 @@ The event argument contains a set of properties, which are specific to an event.
 
 Synthetic events are the objects which act as a cross-browser wrapper around the browser’s native event. They combine the behavior of different browsers into one API. This is done to make sure that the events show consistent properties across different browsers.
 
+
+
 ### **25.** **你对** **React** **中的** **refs** **有什么理解？**
 
-Refs 是 React 中引用的简写。它是一个属性，有助于存储对特定 React 元素或组件的引用，该引用将由组件渲染配置函数返回。它用于返回对 render() 返回的特定元素或组件的引用。当我们需要 DOM 测量或向组件添加方法时，它们会派上用场。
+Refs 是 React 中Reference的简写。它是一个属性，有助于存储对特定 React 元素或组件的引用，该引用将由组件渲染配置函数返回。它用于返回对 render() 返回的特定元素或组件的引用。当我们需要 DOM 测量或向组件添加方法时，它们会派上用场。
 
 Refs is the short hand for References in React. It is an attribute which helps to store a reference to a particular React element or component, which will be returned by the components render configuration function. It is used to return references to a particular element or component returned by render(). They come in handy when we need DOM measurements or to add methods to the components.
 
-![image-20220204003835734](/Users/jerry/Library/Application Support/typora-user-images/image-20220204003835734.png)
+```js
+class ReferenceDemo extends React.Component{
+     display() {
+         const name = this.inputDemo.value;
+         document.getElementById('disp').innerHTML = name;
+     }
+render() {
+    return(        
+          
+<div>
+            Name: <input type="text" ref={input => this.inputDemo = input} />
+            <button name="Click" onClick={this.display}>Click</button>            
+          
+<h2>Hello <span id="disp"></span> !!!</h2>
+ 
+      </div>
+    );
+   }
+ }
+```
+
+
 
 ### **26.** **列出一些你应该使用** **Refs** **的情况。**
 
@@ -319,19 +548,67 @@ Following are the cases when refs should be used:
 - To trigger imperative animations
 - Integrate with third-party DOM libraries
 
+
+
 ### 27. React中的表单是如何创建的？
 
 React 表单类似于 HTML 表单。但是在 React 中，状态包含在组件的 state 属性中，并且只能通过 setState() 进行更新。因此元素不能直接更新它们的状态，它们的提交由 JavaScript 函数处理。此函数对用户输入表单的数据具有完全访问权限。
 
 React forms are similar to HTML forms. But in React, the state is contained in the state property of the component and is only updated via setState(). Thus the elements can’t directly update their state and their submission is handled by a JavaScript function. This function has full access to the data that is entered by the user into a form.
 
+```js
+handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+}
+ 
+render() {
+    return (        
+         
+<form onSubmit={this.handleSubmit}>
+            <label>
+                Name:
+                <input type="text" value={this.state.value} onChange={this.handleSubmit} />
+            </label>
+            <input type="submit" value="Submit" />
+        </form>
+ 
+    );
+}
+```
+
+
+
 ### **28.** **如何在** **React** **中模块化代码？**
 
 我们可以使用导出和导入属性来模块化代码。它们有助于在不同的文件中分别编写组件。
 
-![image-20220204004014481](/Users/jerry/Library/Application Support/typora-user-images/image-20220204004014481.png)
+```js
+//ChildComponent.jsx
+export default class ChildComponent extends React.Component {
+  render() {
+    return(           
+      <div>              
+        <h1>This is a child component</h1>
+      </div>
+    );
+  }
+}
+ 
+//ParentComponent.jsx
+import ChildComponent from './childcomponent.js';
+class ParentComponent extends React.Component {    
+  render() {        
+    return(                        
+      <div>               
+        <App />          
+      </div>
+    );  
+  }
+}
+```
 
-![image-20220204004024350](/Users/jerry/Library/Application Support/typora-user-images/image-20220204004024350.png)
+
 
 ### 29. 你对受控和不受控的组件了解多少？
 
@@ -376,7 +653,7 @@ HOC can be used for many tasks like:
 
 
 
-### 32. 什么是纯成分？
+### 32. 什么是Pure component？
 
 **纯** 组件是可以编写的最简单、最快的组件。它们可以替换任何只有 render()的组件。这些组件增强了代码的简单性和应用程序的性能。
 
@@ -414,11 +691,15 @@ Following are some of the major problems with MVC framework:
 - There was huge memory wastage
 - Because of circular     dependencies, a complicated model was created around models and views
 
+
+
 ### 35. 解释Flux。
 
 Flux 是一种强制单向数据流的架构模式。它控制派生数据，并使用对所有数据具有权限的中央存储实现多个组件之间的通信。整个应用程序中的任何数据更新都必须仅在此处发生。Flux 为应用程序提供稳定性并减少运行时错误。
 
 Flux is an architectural pattern which enforces the uni-directional data flow. It controls derived data and enables communication between multiple components using a central Store which has authority for all data. Any update in data throughout the application must occur here only. Flux provides stability to the application and reduces run-time errors.
+
+![35](/Users/jerry/Desktop/面试/react面试宝典/react--interview-point/图库/35.png)
 
 
 
@@ -432,12 +713,12 @@ Redux is one of the most trending libraries for front-end development in today�
 
 ### **37. Redux** **遵循的三个原则是什么？**
 
-1. ***单一事实来源：\***整个应用程序的状态存储在单个存储中的对象/状态树中。单一状态树可以更轻松地跟踪随时间的变化以及调试或检查应用程序。
-2. ***状态是只读的：*** 改变状态的唯一方法是触发一个动作。操作是描述更改的普通     JS 对象。就像状态是数据的最小表示一样，动作是对该数据更改的最小表示。 
-3. ***使用纯函数进行更改：\*** 为了指定状态树如何通过操作进行转换，您需要纯函数。纯函数是那些返回值仅取决于其参数值的函数。
-4. ***Single source of truth:\*** The state of     the entire application is stored in an object/ state tree within a     single store. The single state tree makes it easier to keep     track of changes over time and debug or inspect the application.
-5. ***State is     read-only:\*** The only way to change the state is to     trigger an action. An action is a plain JS object describing the     change. Just like state is the minimal representation of data, the action     is the minimal representation of the change to that data. 
-6. ***Changes are     made with pure functions:\*** In order to specify how     the state tree is transformed by actions, you need pure functions. Pure     functions are those whose return value depends solely on the values     of their arguments.
+1. **单一事实来源：**整个应用程序的状态store在单个存储中的对象/状态树中。单一状态树可以更轻松地跟踪随时间的变化以及调试或检查应用程序。
+2. ***状态是只读的：*** 改变状态的唯一方法是触发一个action。操作是描述更改的普通JS对象。就像状态是数据的最小表示一样，action是对该数据更改的最小表示。 
+3. **使用纯函数进行更改：** 为了指定状态树如何通过操作进行转换，您需要纯函数。纯函数是那些返回值仅取决于其参数值的函数。
+4. **Single source of truth:** The state of the entire application is stored in an object/ state tree within a single store. The single state tree makes it easier to keep     track of changes over time and debug or inspect the application.
+5. **State is read-only:** The only way to change the state is to trigger an action. An action is a plain JS object describing the     change. Just like state is the minimal representation of data, the action     is the minimal representation of the change to that data. 
+6. **Changes are made with pure functions:** In order to specify how     the state tree is transformed by actions, you need pure functions. Pure     functions are those whose return value depends solely on the values     of their arguments.
 
 
 
@@ -446,18 +727,18 @@ Redux is one of the most trending libraries for front-end development in today�
 
 Redux 使用“Store”将应用程序的整个状态存储在一个地方。因此，所有组件的状态都存储在 Store 中，并且它们从 Store 本身接收更新。单一状态树可以更轻松地跟踪随时间的变化以及调试或检查应用程序。
 
-Redux uses ‘Store’ for storing the application’s entire state at one place. So all the component’s state are stored in the Store and they receive updates from the Store itself. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
+Redux uses ‘Store’ for storing the application’s entire state at one place. So all the component’s state are stored in the Store and they receive updates from the Store itself. The single state tree makes it easier to keep track of chang
 
-
+![38](/Users/jerry/Desktop/面试/react面试宝典/react--interview-point/图库/38.png)
 
 ### **39.** **列出** **Redux** **的组件。**
 
 Redux 由以下组件组成：
 
-1. **动作**——它是一个描述发生了什么的对象。
-2. **Reducer** –     这是一个确定状态将如何变化的地方。
-3. **Store** –     整个应用程序的状态/对象树保存在     Store 中。
-4. **查看**-     仅显示商店提供的数据。
+1. **Action** – 它是一个描述发生了什么的对象。
+2. **Reducer** – 这是一个确定状态将如何变化的地方。
+3. **Store** – 整个应用程序的状态/对象树保存在Store中。
+4. **View** – 仅显示store提供的数据。
 
 Redux is composed of the following components:
 
@@ -466,19 +747,30 @@ Redux is composed of the following components:
 3. **Store** –     State/ Object tree of the entire application is saved in the Store.
 4. **View** –     Simply displays the data provided by the Store.
 
+
+
 ###  40. 展示数据流如何通过 Redux？
 
-qdfsfdsfd
+![40](/Users/jerry/Desktop/面试/react面试宝典/react--interview-point/图库/40.png)
 
 
 
 ### **41. Redux** **中的** **Actions** **是如何定义的？**
 
-React 中的 Action 必须有一个 type 属性来指示正在执行的 ACTION 的类型。它们必须定义为字符串常量，您也可以向其添加更多属性。在 Redux 中，动作是使用称为动作创建者的函数创建的。以下是 Action 和 Action Creator 的示例：
+React 中的 Action 必须有一个 type 属性来指示正在执行的 ACTION 的类型。它们必须定义为字符串常量，您也可以向其添加更多属性。在 Redux 中，Action是使用称为动作创建者的函数创建的。以下是 Action 和 Action Creator 的示例：
 
 Actions in React must have a type property that indicates the type of ACTION being performed. They must be defined as a String constant and you can add more properties to it as well. In Redux, actions are created using the functions called Action Creators. Below is an example of Action and Action Creator:
 
-![image-20220204005222470](/Users/jerry/Library/Application Support/typora-user-images/image-20220204005222470.png)
+```js
+function addTodo(text) {
+       return {
+                type: ADD_TODO,    
+                 text    
+    }
+}
+```
+
+
 
 ### 42.解释Reducer的作用。
 
@@ -490,18 +782,20 @@ Reducers are pure functions which specify how the application’s state changes 
 
 ### 43. Store在Redux中有什么意义？
 
-store 是一个 JavaScript 对象，它可以保存应用程序的状态并提供一些辅助方法来访问状态、调度操作和注册侦听器。应用程序的整个状态/对象树保存在单个存储中。因此，Redux 非常简单且可预测。我们可以将中间件传递给 store 来处理数据，并记录更改 store 状态的各种操作。所有的动作都通过 reducer 返回一个新的状态。
+store 是一个 JavaScript 对象，它可以保存应用程序的状态并提供一些辅助方法来访问状态、调度操作和注册侦听器。应用程序的整个状态/对象树保存在单个store中。因此，Redux 非常简单且可预测。我们可以将中间件传递给 store 来处理数据，并记录更改 store 状态的各种操作。所有的动作都通过 reducer 返回一个新的状态。
 
 A store is a JavaScript object which can hold the application’s state and provide a few helper methods to access the state, dispatch actions and register listeners. The entire state/ object tree of an application is saved in a single store. As a result of this, Redux is very simple and predictable. We can pass middleware to the store to handle the processing of data as well as to keep a log of various actions that change the state of stores. All the actions return a new state via reducers.
+
+### 
 
 ### **44. Redux** **和** **Flux** **有什么不同？**
 
 | **Flux**                   | **还原**                  |
 | -------------------------- | ------------------------- |
-| 1. Store包含状态和变化逻辑 | 1.存储和更改逻辑是分开的  |
-| 2.有多家店铺               | 2.只有一家店              |
-| 3.所有店铺都断网平仓       | 3. 具有分层减速器的单存储 |
-| 4. 有单例调度员            | 4.没有dispatcher的概念    |
+| 1. Store包含状态和更改逻辑 | 1.存储和更改逻辑是分开的  |
+| 2.有多个store              | 2.只有一个store           |
+| 3.所有store都断网平仓      | 3. 具有分层减速器的单存储 |
+| 4. 有单例dispatcher        | 4.没有dispatcher的概念    |
 | 5. React 组件订阅 store    | 5.容器组件利用connect     |
 | 6. 状态是可变的            | 6. 状态是不可变的         |
 
@@ -524,13 +818,13 @@ A store is a JavaScript object which can hold the application’s state and prov
 
 Redux 的优点如下：
 
-- **结果的可预测性****——** 由于总是有一个事实来源，即存储，因此不会混淆如何将当前状态与动作和应用程序的其他部分同步。
-- **可维护性****——**代码变得更容易维护，具有可预测的结果和严格的结构。
-- **服务器端渲染****——** 您只需要将在服务器上创建的商店传递给客户端。这对于初始渲染非常有用，并在优化应用程序性能时提供更好的用户体验。
-- **开发人员工具****——**从操作到状态更改，开发人员可以实时跟踪应用程序中发生的一切。
-- **社区和生态系统** ——Redux     背后有一个庞大的社区，这使得它的使用更具吸引力。一个由人才组成的大型社区为图书馆的改进做出了贡献，并利用它开发了各种应用程序。
-- **易于测试** ——Redux     的代码主要是小型、纯净和隔离的函数。这使得代码可测试且独立。
-- **组织** ——Redux     对代码的组织方式非常精确，这使得团队使用它时代码更加一致和容易。
+- **结果的可预测性**—— 由于总是有**一个事实来源**，即**store**，因此不会混淆如何将当前状态与动作和应用程序的其他部分同步。
+- **可维护性**——代码变得更**容易维护**，具有可预测的结果和严格的结构。
+- **服务器端渲染**—— 您只需要将在服务器上创建的store传递给**客户端**。这对于初始渲染非常有用，并在优化应用程序性能时提供更好的用户体验。
+- **开发人员工具**——从操作到状态更改，开发人员可以**实时跟踪**应用程序中发生的一切。
+- **社区和生态系统** ——**Redux**背后有一个**庞大的社区**，这使得它的使用更具吸引力。一个由人才组成的大型社区为库的改进做出了贡献，并利用它开发了各种应用程序。
+- **易于测试** ——Redux的代码主要是小型、纯净和隔离的函数。这使得代码可测试且独立。
+- **组织** ——Redux对代码的组织方式非常精确，这使得团队使用它时代码更加一致和容易。
 - **Predictability     of outcome –** Since there is always one source of     truth, i.e. the store, there is no confusion about how to sync the current     state with actions and other parts of the application.
 - **Maintainability     –** The code becomes easier to maintain with a     predictable outcome and strict structure.
 - **Server-side     rendering –** You just need to pass the store created on     the server, to the client side. This is very useful for initial     render and provides a better user experience as it optimizes the     application performance.
@@ -553,7 +847,7 @@ React Router is a powerful routing library built on top of React, which helps in
 
 ### 47. 为什么 在 React Router v4 中使用switch 关键字？
 
-虽然**<div>**用于封装Router内部的多个路由。当您只想在多个定义的路由中显示要呈现的单个路由时，使用 “switch”关键字 。 **<switch>**标记在使用时将键入的 URL 与定义的路由按顺序匹配。 当找到第一个匹配项时，它会呈现指定的路由。从而绕过剩余的 路线。
+虽然**<div>**用于封装Router内部的多个路由。当您只想在多个定义的路由中显示要呈现的单个路由时，使用 “switch”关键字 。 **<switch>**标记在使用时将键入的 URL 与定义的路由按顺序匹配。 当找到第一个匹配项时，它会呈现指定的路由。从而绕过剩余的路由。
 
 Although a **<div>** is used to encapsulate multiple routes inside the Router. The ‘switch’ keyword is used when you want to display only a single route to be rendered amongst the several defined routes. The **<switch>** tag when in use matches the typed URL with the defined routes in sequential order. When the first match is found, it renders the specified route. Thereby bypassing the remaining routes.
 
@@ -565,7 +859,13 @@ Although a **<div>** is used to encapsulate multiple routes inside the Router. T
 
 A Router is used to define multiple routes and when a user types a specific URL, if this URL matches the path of any ‘route’ defined inside the router, then the user is redirected to that particular route. So basically, we need to add a Router library to our app that allows creating multiple routes with each leading to us a unique view.
 
-![image-20220204005147889](/Users/jerry/Library/Application Support/typora-user-images/image-20220204005147889.png)
+```js
+<switch>
+    <route exact path=’/’ component={Home}/>
+    <route path=’/posts/:id’ component={Newpost}/>
+    <route path=’/posts’   component={Post}/>
+</switch>
+```
 
 
 
@@ -573,18 +873,18 @@ A Router is used to define multiple routes and when a user types a specific URL,
 
 几个优点是：
 
-1. 就像     React 如何基于组件一样，在     React Router v4 中，API     是*“All About Components”*。路由器可以可视化为单个根组件（**<BrowserRouter>**），我们在其中包含特定的子路由（**<route>**）。
-2. 无需手动设置     History 值：在     React Router v4 中，我们需要做的就是将路由包装在**<BrowserRouter>**组件中。
-3. 这些包被拆分：三个包，一个用于     Web、Native     和     Core。这支持我们应用程序的紧凑尺寸。基于类似的编码风格很容易切换。
-4. Just     like how React is based on components, in React Router v4, the API     is *‘All About Components’*. A Router can be visualized as a     single root component (**<BrowserRouter>**) in which we enclose     the specific child routes (**<route>**).
-5. No need to manually set History     value: In React Router v4, all we need to do is wrap our routes     within the **<BrowserRouter>** component.
-6. The packages are split: Three     packages one each for Web, Native and Core. This supports the compact size     of our application. It is easy to switch over based on a similar coding     style.
+1. 就像React 如何基于组件一样，在     React Router v4 中，API是*“All About Components”*。路由器可以可视化为单个根组件（**<BrowserRouter>**），我们在其中包含特定的子路由（**<route>**）。
+2. 无需手动设置History 值：在React Router v4 中，我们需要做的就是将路由包装在**<BrowserRouter>**组件中。
+3. 这些包被拆分：三个包，每一个分别用于Web、Native和Core。这支持我们应用程序的紧凑尺寸。基于类似的编码风格很容易切换。
+4. Just like how React is based on components, in React Router v4, the API is *‘All About Components’*. A Router can be visualized as a single root component (**<BrowserRouter>**) in which we enclose the specific child routes (**<route>**).
+5. No need to manually set History value: In React Router v4, all we need to do is wrap our routes within the **<BrowserRouter>** component.
+6. The packages are split: Three packages one each for Web, Native and Core. This supports the compact size of our application. It is easy to switch over based on a similar coding style.
 
 
 
 ### **50. React Router** **与传统路由有何不同？**
 
-| **话题**       | **常规路由**                                 | **反应路由**                       |
+| **话题**       | **常规路由**                                 | **React路由**                      |
 | -------------- | -------------------------------------------- | ---------------------------------- |
 | **涉及的页数** | 每个视图对应一个新文件                       | 仅涉及单个 HTML 页面               |
 | **网址更改**   | 向服务器发送 HTTP 请求并接收相应的 HTML 页面 | 仅更改历史属性                     |
