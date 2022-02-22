@@ -2,15 +2,86 @@
 
 
 
-## *Q1*： React 是如何工作的？
+## Entry
+
+
+
+### Q1： **什么是React**
+
+ 
+
+React 是 Facebook 创建的一个开源 JavaScript 库，用于在 Web 和移动应用程序中构建复杂的交互式 UI。React 的核心目的是构建 UI 组件；它通常被称为“MVC”架构中的“V”（视图）。
+
+
+
+### Q2： **ReactJS 的主要特点是什么？**
+
+ 
+
+ReactJS 的主要特点如下，
+
+- 考虑到 RealDOM 操作成本高昂，它使用**VirtualDOM而不是 RealDOM。**
+- 支持**服务端渲染**
+- 遵循**单向**数据流或数据绑定
+- 使用**可重用/可组合**的 UI 组件来开发视图
+
+
+
+### Q3： React 是如何工作的？
 
 
 
 React 创建一个虚拟 DOM。当组件中的状态发生变化时，它首先运行一个“差异”算法，该算法识别虚拟 DOM 中发生了什么变化。第二步是协调，它使用 diff 的结果更新 DOM。
 
+### Q4： ReactJS 的优点是什么？
+
+ 
+
+1. 使用 Virtual DOM 提高应用程序的性能
+2. JSX 让代码易读易写
+3. 它在客户端和服务器端呈现
+4. 易于与其他框架（Angular、BackboneJS）集成，因为它只是一个视图库
+5. 易于编写 UI 测试用例并与 JEST 等工具集成。
 
 
-## Q2： 什么是*上下文*？
+
+### Q5： **React 中的`props`是什么？**
+
+
+
+**Props**是 React 组件的输入。它们是单个值或包含一组值的对象，这些值在创建时使用类似于 HTML 标记属性的命名约定传递给 React 组件。即，*它们是从父组件传递到子组件的数据。*
+
+React 中 props 的主要目的是提供以下组件功能：
+
+1. 将自定义数据传递给您的 React 组件。
+2. 触发`state`变化。
+3. 通过`this.props.reactProp`内部组件的`render()`方法使用。
+
+例如，让我们创建一个带有 reactProp 属性的元素，
+
+```js
+<Element reactProp = "1" />
+```
+
+这个`reactProp`（或任何你想出来的）名称然后成为附加到 React 的本机 props 对象的属性，该对象最初已经存在于使用 React 库创建的所有组件上。
+
+```js
+props.reactProp;
+```
+
+
+
+### Q6： **你会如何在 React 中编写内联样式？**
+
+ 
+
+```js
+<div style={{ height: 10 }}>
+```
+
+
+
+### Q7： 什么是*上下文*？
 
 
 
@@ -58,39 +129,9 @@ class ThemedButton extends React.Component {
 
 
 
+### Q8： `Refs`有什么用？
 
 
-## Q3： **`props`React 中有什么？**
-
-
-
-**Props**是 React 组件的输入。它们是单个值或包含一组值的对象，这些值在创建时使用类似于 HTML 标记属性的命名约定传递给 React 组件。即，*它们是从父组件传递到子组件的数据。*
-
-React 中 props 的主要目的是提供以下组件功能：
-
-1. 将自定义数据传递给您的 React 组件。
-2. 触发`state`变化。
-3. 通过`this.props.reactProp`内部组件的`render()`方法使用。
-
-例如，让我们创建一个带有 reactProp 属性的元素，
-
-```js
-<Element reactProp = "1" />
-```
-
-这个`reactProp`（或任何你想出来的）名称然后成为附加到 React 的本机 props 对象的属性，该对象最初已经存在于使用 React 库创建的所有组件上。
-
-```js
-props.reactProp;
-```
-
-
-
-## Q4： `Refs`有什么用？
-
-**添加到 PDF** **入口** ![img](data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg fill='%23D3D3D3' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24px' height='24px'%3E%3Cpath d='M11,16.4l-4.7-4.7l1.4-1.4l3.3,3.3l8.4-8.4C17.5,3.3,14.9,2,12,2C6.5,2,2,6.5,2,12s4.5,10,10,10s10-4.5,10-10 c0-1.9-0.5-3.6-1.4-5.1L11,16.4z'/%3E%3C/svg%3E)
-
-**回答**
 
 **Refs**提供了一种访问在 render 方法中创建的 DOM 节点或 React 元素的方法。在大多数情况下应该避免使用它们，但是，当我们需要直接访问 DOM 元素或组件实例时，它们会很有用。
 
@@ -114,58 +155,15 @@ class MyComponent extends React.Component {
 
 
 
-## Q5： 什么是**JEST**？
+### Q9： 什么是**JEST**？
 
 **Jest**是 Facebook 基于 Jasmine 制作的 JavaScript 单元测试框架，提供自动化的 mock 创建和 jsdom 环境。它通常用于测试 React 组件。
 
 
 
-## Q6： ReactJS 的优点是什么？
+## Junior
 
- 
-
-1. 使用 Virtual DOM 提高应用程序的性能
-2. JSX 让代码易读易写
-3. 它在客户端和服务器端呈现
-4. 易于与其他框架（Angular、BackboneJS）集成，因为它只是一个视图库
-5. 易于编写 UI 测试用例并与 JEST 等工具集成。
-
-
-
-## Q7： **你会如何在 React 中编写内联样式？**
-
- 
-
-```js
-<div style={{ height: 10 }}>
-```
-
-
-
-## Q8： **什么是React**
-
- 
-
-React 是 Facebook 创建的一个开源 JavaScript 库，用于在 Web 和移动应用程序中构建复杂的交互式 UI。React 的核心目的是构建 UI 组件；它通常被称为“MVC”架构中的“V”（视图）。
-
-
-
-## Q9： **ReactJS 的主要特点是什么？**
-
- 
-
-ReactJS 的主要特点如下，
-
-- 考虑到 RealDOM 操作成本高昂，它使用**VirtualDOM而不是 RealDOM。**
-- 支持**服务端渲染**
-- 遵循**单向**数据流或数据绑定
-- 使用**可重用/可组合**的 UI 组件来开发视图
-
-
-
-## Q10： *class component*和*function component*有什么区别？
-
- 
+### Q10： *class component*和*function component*有什么区别？
 
 **class component**
 
@@ -184,7 +182,7 @@ ReactJS 的主要特点如下，
 
 
 
-## Q11： **使用 React 有什么好处？**
+### Q11： **使用 React 有什么好处？**
 
  
 
@@ -196,7 +194,7 @@ ReactJS 的主要特点如下，
 
 
 
-## Q12： **你应该在 React 组件的哪个位置发出 AJAX 请求？**
+### Q12： **你应该在 React 组件的哪个位置发出 AJAX 请求？**
 
   
 
@@ -206,7 +204,7 @@ ReactJS 的主要特点如下，
 
 
 
-## Q13：`state` 和`props`有什么不一样？
+### Q13：`state` 和`props`有什么不一样？
 
  
 
@@ -215,7 +213,7 @@ ReactJS 的主要特点如下，
 
 
 
-## Q14： *展示组件*和*容器组件*有什么区别？
+### Q14： *展示组件*和*容器组件*有什么区别？
 
  
 
@@ -224,7 +222,7 @@ ReactJS 的主要特点如下，
 
  
 
-## Q15： React 中`refs`有什么用？
+### Q15： React 中`refs`有什么用？
 
  
 
@@ -268,7 +266,7 @@ function CustomForm ({handleSubmit}) {
 
 
 
-## Q16： React 中*受控*组件和非*受控*组件有什么区别？
+### Q16： React 中*受控*组件和非*受控*组件有什么区别？
 
 这与有状态的 DOM 组件（表单元素）有关，React 文档解释了其中的区别：
 
@@ -295,7 +293,7 @@ This relates to stateful DOM components (form elements) and the React docs expla
 
 
 
-## Q17： 什么是*受控组件*？
+### Q17： 什么是*受控组件*？
 
 **受控组件**是通过`props`获取其当前值并通过`onChange`之类的回调通知更改的组件。父组件通过处理回调和管理自己的状态并将新值作为props传递给受控组件来“控制”它。您也可以将其称为“哑组件”。
 
@@ -308,7 +306,7 @@ A **Controlled Component** is one that takes its current value through `props` a
 
 
 
-## Q18： React 中`state`是什么？
+### Q18： React 中`state`是什么？
 
 **组件的状态**是一个对象，它包含一些可能在组件的生命周期内发生变化的信息。我们应该始终尝试使我们的状态尽可能简单，并尽量减少有状态组件的数量。
 
@@ -337,13 +335,13 @@ A **Controlled Component** is one that takes its current value through `props` a
 
 
 
-## Q19： 在 React中*挂载*组件意味着什么？
+### Q19： 在 React中*挂载*组件意味着什么？
 
  它在 DOM 中创建了一个相应的元素并与之连接。
 
 
 
-## Q20： 我们如何将 props 从父组件传递给子组件？
+### Q20： 我们如何将 props 从父组件传递给子组件？
 
  例如：
 
@@ -353,7 +351,7 @@ A **Controlled Component** is one that takes its current value through `props` a
 
 
 
-## Q21： **什么是Fragment?**
+### Q21： **什么是Fragment?**
 
 这是 React 中的常见模式，用于组件*返回多个元素*。**Fragment**让您可以对子列表进行分组，而无需向 DOM 添加额外的节点。
 
@@ -387,7 +385,7 @@ render() {
 
 
 
-## Q22： 渲染列表时，什么是`key` ，它的目的是什么？
+### Q22： 渲染列表时，什么是`key` ，它的目的是什么？
 
 **key**帮助 React 识别哪些项目已更改、添加或删除。应为数组内的元素提供键，以使元素具有稳定的标识。选择键的最佳方法是使用一个字符串，该字符串在其兄弟项中唯一标识一个列表项。
 
@@ -407,7 +405,7 @@ render () {
 
 
 
-## Q23： 如何创建`refs`？
+### Q23： 如何创建`refs`？
 
 **refs**使用创建`React.createRef()`方法并通过 ref 属性附加到 React 元素。为了在整个组件中使用 refs，只需在构造函数中将 ref 分配给实例属性。
 
@@ -447,7 +445,7 @@ class UserForm extends Component {
 
 
 
-## Q24： React Hooks：React 中什么是`useState()`？
+### Q24： React Hooks：React 中什么是`useState()`？
 
  ```js
  ...
@@ -472,7 +470,7 @@ We can use the `setCounter` method to update the state of count anywhere - In th
 
 
 
-## Q25：  **React Native 和 React 有什么区别？**
+### Q25：  **React Native 和 React 有什么区别？**
 
 - **ReactJS**是一个 JavaScript 库，支持前端 Web 并在服务器上运行，用于构建用户界面和 Web 应用程序。
 - **React Native**是一个编译成原生应用程序组件的移动框架，允许您使用 JavaScript 构建原生移动应用程序（iOS、Android 和 Windows），允许您使用 ReactJS 构建您的组件，并在后台实现 ReactJS。
@@ -480,13 +478,13 @@ We can use the `setCounter` method to update the state of count anywhere - In th
 - **ReactJS** is a JavaScript library, supporting both front end web and being run on the server, for building user interfaces and web applications.
 - **React Native** is a mobile framework that compiles to native app components, allowing you to build native mobile applications (iOS, Android, and Windows) in JavaScript that allows you to use ReactJS to build your components, and implements ReactJS under the hood.
 
-## Q26： **你将如何防止组件在 React 中呈现？**
+### Q26： **你将如何防止组件在 React 中呈现？**
 
  从渲染方法返回`null`。
 
 
 
-## Q27： **什么是 JSX？**
+### Q27： **什么是 JSX？**
 
  JSX 是**JavaScript XML**的语法表示法（ECMAScript 的类似 XML 的语法扩展）。它代表 JavaScript XML。它提供了 JavaScript 的表现力以及类似 HTML 的模板语法。例如，下面的 h1 标签内的文本作为 javascript 函数返回给 render 函数，
 
@@ -504,7 +502,7 @@ render(){
 
 
 
-## Q28： **React 的局限性是什么？**
+### Q28： **React 的局限性是什么？**
 
 1. **React 只是一个视图库，而不是一个成熟的框架**
 2. **对于刚接触 Web 开发的初学者来说，有一个学习曲线。**
@@ -518,7 +516,7 @@ render(){
 4. The code complexity increases with inline templating and JSX.
 5. Too many smaller components leading to over-engineering or boilerplate
 
-## Q29：**什么是有状态组件？**
+### Q29：**什么是有状态组件？**
 
 如果组件的行为依赖于组件的状态，那么它可以称为*有状态组件*。这些有状态的组件始终是类组件，并且具有在构造函数中初始化的状态。
 
@@ -539,7 +537,7 @@ class App extends Component {
 
 
 
-## Q30： 什么是*无状态组件*？
+### Q30： 什么是*无状态组件*？
 
 如果行为独立于其状态，那么它可以是**无状态组件**。您可以使用函数或类来创建无状态组件。但除非您需要使用生命周期挂钩在组件中，否则您应该选择无状态功能组件。
 
@@ -583,7 +581,7 @@ const BooksList = ({books}) => {
 
   
 
-## Q31： **React 与 AngularJS (1.x) 有何不同？**
+### Q31： **React 与 AngularJS (1.x) 有何不同？**
 
 例如，AngularJS (1.x) 通过扩展 HTML 标记和在运行时注入各种结构（例如指令、控制器、服务）来构建应用程序。因此，AngularJS 对应用程序的更大架构非常固执己见——这些抽象在某些情况下当然有用，但它们是以灵活性为代价的。
 
@@ -593,7 +591,7 @@ For example, AngularJS (1.x) approaches building an application by extending HTM
 
 By contrast, React focuses exclusively on the creation of components, and has few (if any) opinions about an application’s architecture. This allows a developer an incredible amount of flexibility in choosing the architecture they deem “best” — though it also places the responsibility of choosing (or building) those parts on the developer.
 
-## Q32：`state` 和`props` 和有什么不一样？
+### Q32：`state` 和`props` 和有什么不一样？
 
 **props**和**state**都是纯 JavaScript 对象。虽然它们都持有影响渲染输出的信息，但它们在组件方面的功能不同。例如，
 
@@ -605,7 +603,7 @@ Both **props** and **state** are plain JavaScript objects. While both of them ho
 - **Props** get passed to the component similar to function parameters
 - **State** is managed within the component similar to variables declared within a function.
 
-## Q33： **什么是Flow？**
+### Q33： **什么是Flow？**
 
 **Flow**是一个静态类型检查器，旨在查找 JavaScript 程序中的类型错误，由 Facebook 创建。Flow类型可以表达比传统类型系统更细粒度的区别。例如，与大多数类型系统不同，Flow 可以帮助您捕获涉及 null 的错误。
 
@@ -613,7 +611,7 @@ Both **props** and **state** are plain JavaScript objects. While both of them ho
 
 
 
-## Q34： **如何在 ReactJS 中创建组件？**
+### Q34： **如何在 ReactJS 中创建组件？**
 
  有两种可能的方式来创建 ReactJS 组件。
 
@@ -641,7 +639,7 @@ Both **props** and **state** are plain JavaScript objects. While both of them ho
 
 
 
-## Q35： 回调函数作为`setState`参数的目的是什么？
+### Q35： 回调函数作为`setState`参数的目的是什么？
 
 回调函数被调用时`setState`完成并渲染组件。自从`setState`是**异步**回调函数用于任何发布操作。
 
@@ -657,7 +655,7 @@ setState({name: 'sudheer'}, () => console.log('The name has updated and componen
 
 
 
-## Q36： *React 中的portals*是什么，我们什么时候需要它们？
+### Q36： *React 中的portals*是什么，我们什么时候需要它们？
 
 **Portals**提供了一种一流的方式来将子级渲染到存在于父组件的 DOM 层次结构之外的 DOM 节点中。
 
@@ -679,7 +677,7 @@ render() {
 
 
 
-## Q37： **如何将参数传递给事件处理程序或回调？**
+### Q37： **如何将参数传递给事件处理程序或回调？**
 
 您可以使用箭头函数来包装事件处理程序并传递参数：
 
@@ -695,7 +693,7 @@ render() {
 
 
 
-## Q38： 在 React 组件的生命周期中会发生什么？
+### Q38： 在 React 组件的生命周期中会发生什么？
 
  在最高级别，React 组件具有分为三大类的生命周期事件：
 
@@ -711,7 +709,7 @@ At the highest level, React components have lifecycle events that fall into thre
 
 ![q38](/Users/jerry/Desktop/面试/react面试宝典/react--interview-point/图库/q38.png) 
 
-## Q39： Redux 中的*组件*和*容器*有什么区别？
+### Q39： Redux 中的*组件*和*容器*有什么区别？
 
 - **组件**是 React API 的一部分。组件是描述 React UI 的一部分的类或函数。
 - **容器**是连接到 redux store的 React 组件的非正式术语。容器接收 Redux 状态更新和分发actions，它们通常不渲染 DOM 元素；他们将渲染委托给展示性子组件。
@@ -719,7 +717,7 @@ At the highest level, React components have lifecycle events that fall into thre
 - **Component** is part of the React API. A Component is a class or function that describes part of a React UI.
 - **Container** is an informal term for a React component that is connected to a redux store. Containers receive Redux state updates and dispatch actions, and they usually don't render DOM elements; they delegate rendering to presentational child components.
 
-## Q40： **什么是*内联条件表达式*？**(*inline conditional expressions*)
+### Q40： **什么是*内联条件表达式*？**(*inline conditional expressions*)
 
 您可以使用 JS 提供的 if 语句或三元表达式来有条件地呈现表达式。除了这些方法之外，您还可以将任何表达式嵌入到 JSX 中，方法是将它们包裹在花括号中，然后跟 JS 逻辑运算符 (&&)。
 
@@ -755,7 +753,7 @@ if(this.state.mode === 'view') {
 
 
 
-## Q41： **如何防止 React 中事件回调的默认行为?**
+### Q41： **如何防止 React 中事件回调的默认行为?**
 
 你调用`e.preventDefault();`传递给回调的事件 e。
 
@@ -763,7 +761,7 @@ You call `e.preventDefault();` on the event e passed into the callback.
 
 
 
-## Q42： 什么是**Reconciliation**?
+### Q42： 什么是**Reconciliation**?
 
 当组件的 props 或 state 发生变化时，React 通过比较新返回的元素和之前渲染的元素来决定是否需要进行实际的 DOM 更新。当它们不一样（变化）时，React 将更新 DOM。这个过程称为***Reconciliation***。
 
@@ -771,7 +769,7 @@ When a component’s props or state change, React decides whether an actual DOM 
 
 
 
-## Q43： 使用带有 props 参数的`super`构造函数的目的是什么？
+### Q43： 使用带有 props 参数的`super`构造函数的目的是什么？
 
 在调用`super()`方法之前，子类构造函数不能使用**this**引用。这同样适用于 ES6 子类。将 props 参数传递给`super()`call的主要原因是在您的子构造函数中访问`this.props`。
 
@@ -810,7 +808,7 @@ class MyComponent extends React.Component {
 
 
 
-## Q44： 当你调用`setState`时会发生什么？
+### Q44： 当你调用`setState`时会发生什么？
 
 React 在被调用时要做的第一件事就是将你传入的对象合并到组件的当前状态中。这将启动一个称为**Reconciliation**的过程。协调的最终目标是以最有效的方式根据这个新状态更新 UI。`setState``setState`
 
@@ -820,7 +818,7 @@ React 在被调用时要做的第一件事就是将你传入的对象合并到�
 
  
 
-## Q45： *Element*和*Component*和有什么不一样？
+### Q45： *Element*和*Component*和有什么不一样？
 
 **Element**是一个简单的对象，描述您希望在屏幕上显示的 DOM 节点或其他组件。元素可以在其道具中包含其他元素。创建一个 React 元素很便宜。一旦创建了一个元素，它就永远不会发生变异。React 元素的对象表示如下，
 
@@ -866,7 +864,7 @@ function Button ({ onLogin }) {
 
 
 
-## Q46： 什么是*高阶*组件？
+### Q46： 什么是*高阶*组件？
 
 高阶组件**(HOC)**是一个函数，它接受一个组件并返回一个新组件。基本上，这是一种源自 React 组合特性的模式。我们称它们为**“纯”组件** ，因为它们可以接受任何动态提供的子组件，但它们不会修改或复制其输入组件的任何行为。
 
@@ -890,7 +888,13 @@ HOC can be used for many use cases as below,
 3. State abstraction and manipulation
 4. Props manipulation
 
-## Q47： 为类组件命名不同的*生命周期方法*
+
+
+## Mid
+
+
+
+### Q47： 为类组件命名不同的*生命周期方法*
 
 - `componentWillMount`- 这最常用于根组件中的应用程序配置。
 
@@ -918,7 +922,7 @@ HOC can be used for many use cases as below,
 
 ![q47](/Users/jerry/Desktop/面试/react面试宝典/react--interview-point/图库/q47.png)
 
-## Q48： 什么是`{this.props.children}`以及何时应该使用它？
+#### Q48： 什么是`{this.props.children}`以及何时应该使用它？
 
 您可以在代表“通用框”并且不提前知道其子级的组件上使用`props.children`。它用于在调用组件时显示您在开始标签和结束标签之间包含的任何内容。
 
@@ -937,7 +941,7 @@ const Picture = (props) => {
 
 
 
-## Q49： **什么是高阶（HOC）组件？**
+### Q49： **什么是高阶（HOC）组件？**
 
 *高阶组件*是一个接受一个组件并返回一个新组件的函数。HOC 允许您重用代码、逻辑和引导抽象。最常见的大概就是 Redux 的`connect`函数了。除了简单地共享实用工具库和简单的组合之外，HOC 是在 React 组件之间共享行为的最佳方式。如果你发现自己在不同的地方写了很多做同样事情的代码，你也许可以将这些代码重构为可重用的 HOC。
 
@@ -945,7 +949,7 @@ const Picture = (props) => {
 
 
 
-## Q50： React中的State是什么？
+### Q50： React中的State是什么？
 
  *State*类似于 props，但它是私有的，完全由组件控制。状态本质上是一个对象，它保存数据并确定组件如何渲染和发生行为。
 
@@ -953,7 +957,7 @@ const Picture = (props) => {
 
 
 
-## Q51： **Redux 中的store是什么？**
+### Q51： **Redux 中的store是什么？**
 
  ***store***是一个保存应用程序状态的JavaScript 对象。除此之外，它还具有以下职责：
 
@@ -974,7 +978,7 @@ The *store* is a JavaScript object that holds application state. Along with this
 
   
 
-## Q52： **你将如何阻止组件渲染？**
+### Q52： **你将如何阻止组件渲染？**
 
 从组件的渲染方法返回`null`不会影响组件生命周期方法的触发。
 
@@ -982,7 +986,7 @@ Returning `null` from a component's render method does not affect the firing of 
 
 
 
-## Q53： **为什么建议将回调函数传递给 setState 而不是对象？**
+### Q53： **为什么建议将回调函数传递给 setState 而不是对象？**
 
 因为`this.props`和`this.state`可能会异步更新，所以您不应该依赖它们的值来计算下一个状态。
 
@@ -990,7 +994,7 @@ Because `this.props` and `this.state` may be updated asynchronously, you should 
 
 
 
-## Q54： **从数据数组呈现组件列表的典型模式是什么？**
+### Q54： **从数据数组呈现组件列表的典型模式是什么？**
 
 使用为每个数组元素执行的箭头函数调用数组上的 map，可能为每个元素输出一个 React 组件。
 
@@ -998,7 +1002,7 @@ Call map on an array with an arrow function that executes for each array element
 
 
 
-## Q55： **React 中的 PropType 是什么？**
+### Q55： **React 中的 PropType 是什么？**
 
 它们帮助向 React 指示 一个React 组件的属性是和应该接受的数据类型。
 
@@ -1006,412 +1010,466 @@ They help indicate to React what data types a React component's properties are a
 
  
 
-## Q56： 
+### Q56： **什么是纯组件？**
 
- 
+**PureComponent**与 Component 完全相同，只是它为您处理方法。当 props 或 state 发生变化时，PureComponent 将对 props 和 state 进行浅层比较。另一方面，组件不会将当前的道具和状态与开箱即用的下一个进行比较。因此，无论何时调用该组件都会默认重新渲染。`shouldComponentUpdate``shouldComponentUpdate`
 
-## Q57： 
 
- 
 
-## Q58： 
+### Q57： **React 相对于 VueJS 的优势是什么？**
 
- 
+- 为大型应用程序开发提供了更大的灵活性；
+- 更容易测试；
+- 适合移动应用创建；
+- 提供更多信息和解决方案
 
-## Q59： 
 
- 
 
+### Q58： 一些流行的 Flux 库
 
+ 虽然 Flux 是一种通过应用程序强制执行数据流的通用模式，但存在许多可供选择的实现，例如：
 
-## Q60： 
+- [Redux](http://redux.js.org/)：也许是当今最受欢迎的 Flux 库，
+- [Alt.js](http://alt.js.org/)：另一个流行的库，用于管理 React 应用程序中的数据。
 
  
+
+### Q59： React + Redux 应用程序中典型的数据流是怎样的？
 
-## Q61： 
+来自 UI 组件的回调调度带有有效负载的操作，然后在 reducer 中拦截该操作，可能产生新的应用程序状态，然后从 Redux 存储通过应用程序中的组件树向下传播。
 
  
 
-## Q62： 
+### Q60： **避免在事件回调方法中绑定到 this 的替代方法是什么？**
 
+ 在事件处理程序中使用箭头函数。
+
+
+
+### Q61： 在组件的渲染方法中你不应该做的事情有哪些限制？
+
+ 您不能修改组件的状态（使用`setState`），也不能与浏览器交互（在`componentDidMount`中进行）。渲染应该是一个纯函数。
+
  
+
+### Q62： **如何在 JSX 回调中绑定方法或事件处理程序？**
 
-## Q63： 
+ 有3种可能的方式来实现，
 
+1. **构造函数中的绑定：**在 JavaScript 类中，默认情况下不绑定方法。同样的事情也适用于定义为类方法的 ReactJS 事件处理程序。通常我们将它们绑定在构造函数中，如下所示，
+
+   ```js
+   constructor(props) {
+       super(props);
+       this.handleClick = this.handleClick.bind(this);
+   }
+   
+   handleClick() {
+       // Perform some logic
+   }
+   ```
+
+2. **公共类字段语法：**如果您不喜欢使用绑定方法，则可以使用公共类字段语法正确绑定回调
+
+   ```js
+   handleClick = () => {
+        console.log('this is:', this);
+   }
+   <button onClick={this.handleClick}>
+        Click me
+   </button>
+   ```
+
+3. **回调中的箭头函数：**您可以直接在回调中使用箭头函数，如下所示
+
+   ```js
+   <button onClick={(e) => this.handleClick(e)}>
+         Click me
+   </button>
+   ```
+
+
+
+### Q63： 
+
  
 
 
 
-## Q64： 
+### Q64： 
 
  
 
-## Q65： 
+### Q65： 
 
  
 
-## Q66： 
+### Q66： 
 
  
 
-## Q67： 
+### Q67： 
 
  
 
-## Q68： 
+### Q68： 
 
  
 
-## Q69： 
+### Q69： 
 
  
 
-## Q70： 
+### Q70： 
 
  
 
-## Q71： 
+### Q71： 
 
  
 
 
 
-## Q72： 
+### Q72： 
 
  
 
-## Q73： 
+### Q73： 
 
  
 
-## Q74： 
+### Q74： 
 
  
 
-## Q75： 
+### Q75： 
 
  
 
 
 
-## Q76： 
+### Q76： 
 
  
 
-## Q77： 
+### Q77： 
 
  
 
-## Q78： 
+### Q78： 
 
  
 
-## Q79： 
+### Q79： 
 
  
 
-## Q80： 
+### Q80： 
 
  
 
-## Q81： 
+### Q81： 
 
  
 
-## Q82： 
+### Q82： 
 
  
 
-## Q83： 
+### Q83： 
 
  
 
 
 
-## Q84： 
+### Q84： 
 
  
 
-## Q85： 
+### Q85： 
 
  
 
-## Q86： 
+### Q86： 
 
  
 
-## Q87： 
+### Q87： 
 
  
 
 
 
-## Q88： 
+### Q88： 
 
  
 
-## Q89： 
+### Q89： 
 
  
 
-## Q90： 
+### Q90： 
 
  
 
-## Q91： 
+### Q91： 
 
  
 
-## Q92： 
+### Q92： 
 
  
 
-## Q93： 
+### Q93： 
 
  
 
-## Q94： 
+### Q94： 
 
  
 
-## Q95： 
+### Q95： 
 
  
 
 
 
-## Q96： 
+### Q96： 
 
  
 
-## Q97： 
+### Q97： 
 
  
 
-## Q98： 
+### Q98： 
 
  
 
-## Q99： 
+### Q99： 
 
  
 
 
 
-## Q100： 
+### Q100： 
 
  
 
-## Q101： 
+### Q101： 
 
  
 
-## Q102： 
+### Q102： 
 
  
+
+## Senior
+
+
 
-## Q103： 
+### Q103： 
 
  
 
-## Q104： 
+### Q104： 
 
  
 
-## Q105： 
+### Q105： 
 
  
 
-## Q106： 
+### Q106： 
 
  
 
-## Q107： 
+### Q107： 
 
  
 
 
 
-## Q108： 
+### Q108： 
 
  
 
-## Q109： 
+### Q109： 
 
  
 
-## Q110： 
+### Q110： 
 
  
 
-## Q111： 
+### Q111： 
 
  
 
 
 
-## Q112： 
+### Q112： 
 
  
 
-## Q113： 
+### Q113： 
 
  
 
-## Q114： 
+### Q114： 
 
  
 
-## Q115： 
+### Q115： 
 
  
 
-## Q116： 
+### Q116： 
 
  
 
-## Q117： 
+### Q117： 
 
  
 
-## Q118： 
+### Q118： 
 
  
 
-## Q119： 
+### Q119： 
 
  
 
 
 
-## Q120： 
+### Q120： 
 
  
 
-## Q121： 
+### Q121： 
 
  
 
-## Q122： 
+### Q122： 
 
  
 
-## Q123： 
+### Q123： 
 
  
 
 
 
-## Q124： 
+### Q124： 
 
  
 
-## Q125： 
+### Q125： 
 
  
 
-## Q126： 
+### Q126： 
 
  
 
-## Q127： 
+### Q127： 
 
  
 
-## Q128： 
+### Q128： 
 
  
 
-## Q129： 
+### Q129： 
 
  
 
-## Q130： 
+### Q130： 
 
  
 
-## Q131： 
+### Q131： 
 
  
 
 
 
-## Q132： 
+### Q132： 
 
  
 
-## Q133： 
+### Q133： 
 
  
 
-## Q134： 
+### Q134： 
 
  
 
-## Q135： 
+### Q135： 
 
  
 
 
 
-## Q136： 
+### Q136： 
 
  
 
-## Q137： 
+### Q137： 
 
  
 
-## Q138： 
+### Q138： 
 
  
 
-## Q139： 
+### Q139： 
 
  
 
-## Q140： 
+### Q140： 
 
  
 
-## Q141： 
+### Q141： 
 
  
 
-## Q142： 
+### Q142： 
 
  
 
-## Q143： 
+### Q143： 
 
  
 
 
 
-## Q144： 
+### Q144： 
 
  
 
-## Q145： 
+### Q145： 
 
  
 
-## Q146： 
+### Q146： 
 
  
 
-## Q147： 
+### Q147： 
 
  
 
 
 
-## Q148： 
+### Q148： 
 
  
 
-## Q149： 
+### Q149： 
 
  
 
-## Q150： 
+### Q150： 
