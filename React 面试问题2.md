@@ -1,4 +1,4 @@
-# React 面试问题2
+### React 面试问题2
 
 
 
@@ -922,7 +922,9 @@ HOC can be used for many use cases as below,
 
 ![q47](/Users/jerry/Desktop/面试/react面试宝典/react--interview-point/图库/q47.png)
 
-#### Q48： 什么是`{this.props.children}`以及何时应该使用它？
+
+
+### Q48： **什么是`{this.props.children}`以及何时应该使用它？**
 
 您可以在代表“通用框”并且不提前知道其子级的组件上使用`props.children`。它用于在调用组件时显示您在开始标签和结束标签之间包含的任何内容。
 
@@ -1012,7 +1014,9 @@ They help indicate to React what data types a React component's properties are a
 
 ### Q56： **什么是纯组件？**
 
-**PureComponent**与 Component 完全相同，只是它为您处理方法。当 props 或 state 发生变化时，PureComponent 将对 props 和 state 进行浅层比较。另一方面，组件不会将当前的道具和状态与开箱即用的下一个进行比较。因此，无论何时调用该组件都会默认重新渲染。`shouldComponentUpdate``shouldComponentUpdate`
+**PureComponent**与 Component 完全相同，只是它为您处理`shouldComponentUpdate`方法。当 props 或 state 发生变化时，PureComponent 将对 props 和 state 进行浅层比较。另一方面，组件不会将当前的道具和状态与开箱即用的下一个进行比较。因此，无论何时调用`shouldComponentUpdate`组件都会默认重新渲染。
+
+**PureComponent** is exactly the same as Component except that it handles the `shouldComponentUpdate` method for you. When props or state changes, PureComponent will do a shallow comparison on both props and state. Component, on the other hand, won’t compare current props and state to next out of the box. Thus, the component will re-render by default whenever `shouldComponentUpdate` is called.
 
 
 
@@ -1023,34 +1027,53 @@ They help indicate to React what data types a React component's properties are a
 - 适合移动应用创建；
 - 提供更多信息和解决方案
 
+1. Gives more flexibility in large apps developing; 
 
+2. Easier to test; 
+
+3. Suitable for mobile apps creating; 
+
+4. More information and solutions available
+
+   
 
 ### Q58： 一些流行的 Flux 库
 
- 虽然 Flux 是一种通过应用程序强制执行数据流的通用模式，但存在许多可供选择的实现，例如：
+虽然 Flux 是一种通过应用程序强制执行数据流的通用模式，但存在许多可供选择的实现，例如：
 
 - [Redux](http://redux.js.org/)：也许是当今最受欢迎的 Flux 库，
 - [Alt.js](http://alt.js.org/)：另一个流行的库，用于管理 React 应用程序中的数据。
 
- 
+While Flux is a general pattern for enforcing data flow through an application, there exist many implementations from which to choose from, for example:
+
+- [Redux](http://redux.js.org/): perhaps the most popular Flux library today,
+- [Alt.js](http://alt.js.org/): another popular library for managing data in React applications.
+
+
 
 ### Q59： React + Redux 应用程序中典型的数据流是怎样的？
 
 来自 UI 组件的回调调度带有有效负载的操作，然后在 reducer 中拦截该操作，可能产生新的应用程序状态，然后从 Redux 存储通过应用程序中的组件树向下传播。
 
- 
+Callback from UI component dispatches an action with a payload, which then is intercepted in a reducer, possibly producing a new application state, which is then propagated down through the tree of components in the application from the Redux store.
+
+
 
 ### Q60： **避免在事件回调方法中绑定到 this 的替代方法是什么？**
 
- 在事件处理程序中使用箭头函数。
+在事件处理程序中使用箭头函数。
+
+Use arrow functions in your event handlers.
 
 
 
 ### Q61： 在组件的渲染方法中你不应该做的事情有哪些限制？
 
- 您不能修改组件的状态（使用`setState`），也不能与浏览器交互（在`componentDidMount`中进行）。渲染应该是一个纯函数。
+您不能修改组件的状态（使用`setState`），也不能与浏览器交互（在`componentDidMount`中进行）。渲染应该是一个纯函数。
 
- 
+You cannot modify the component's state (with `setState`), nor interact with the browser (do that in `componentDidMount`). Render should be a pure function.
+
+
 
 ### Q62： **如何在 JSX 回调中绑定方法或事件处理程序？**
 
@@ -1090,37 +1113,123 @@ They help indicate to React what data types a React component's properties are a
 
 
 
-### Q63： 
+### Q63： **为什么fragment比container div 更好？**
 
- 
+1. 通过不创建额外的 DOM 节点，片段速度更快，内存使用更少。这只对非常大和深的树有真正的好处。
+2. 一些 CSS 机制，如 Flexbox 和 CSS Grid 有特殊的父子关系，中间添加 div 很难保持想要的布局。
+3. DOM 检查器不那么混乱
+
+1. Fragments bit faster and has less memory usage by without creating an extra DOM node. This only has a real benefit on very large and deep trees.
+2. Some CSS mechanisms like Flexbox and CSS Grid have a special parent-child relationship, and adding divs in the middle makes it hard to keep the desired layout.
+3. The DOM inspector is less cluttered
 
 
 
-### Q64： 
+### Q64： 什么是*prop drilling*，如何避免？
 
- 
+在构建 React 应用程序时，通常需要一个深度嵌套的组件来使用层次结构中更高级别的另一个组件提供的数据。最简单的方法是简单地将 prop 从每个组件传递到层次结构中的下一个组件，从源组件到深度嵌套的组件。这称为**prop drilling**。
 
-### Q65： 
+prop drilling的主要缺点是不应该知道数据的组件变得不必要地复杂并且更难维护。
 
- 
+为了避免prop drilling，一种常见的方法是使用 React 上下文。这允许定义提供数据的`Provider`组件，并允许嵌套组件通过`Consumer`组件或`useContext`hook使用上下文数据。
 
-### Q66： 
+When building a React application, there is often the need for a deeply nested component to use data provided by another component that is much higher in the hierarchy. The simplest approach is to simply pass a prop from each component to the next in the hierarchy from the source component to the deeply nested component. This is called **prop drilling**.
 
- 
+The primary disadvantage of prop drilling is that components that should not otherwise be aware of the data become unnecessarily complicated and are harder to maintain.
 
-### Q67： 
+To avoid prop drilling, a common approach is to use React context. This allows a `Provider` component that supplies data to be defined, and allows nested components to consume context data via either a `Consumer` component or a `useContext` hook.
 
- 
 
-### Q68： 
 
- 
+### Q65： **什么是Action？**
 
-### Q69： 
+Action是普通的 javascript 对象。它们必须具有指示正在执行的操作类型的类型。从本质上讲，操作是将数据从您的应用程序发送到您的store的信息payloads。
 
- 
+Actions are plain javascript objects. They must have a type indicating the type of action being performed. In essence, actions are payloads of information that send data from your application to your store.
 
-### Q70： 
+
+
+### Q66： **shouldComponentUpdate() 方法的意义何在？**
+
+它用于性能原因，例如，如果组件的实现者确定特定属性更改不需要重新渲染，他们可以从此方法返回 false 并跳过重新渲染。
+
+It's used for performance reasons, for example if the implementor of a component knows for sure that a particular property change does not necessitate a re-render, they could return false from this method and skip the re-render.
+
+
+
+### Q67： **什么是Ref 转发？**
+
+**Ref 转发**是一项功能，它允许某些组件获取它们接收到的 ref，并将其进一步传递给子组件。
+
+**Ref forwarding** is a feature that lets some components take a ref they receive, and pass it further down to a child.
+
+```js
+const ButtonElement = React.forwardRef((props, ref) => (
+  <button ref={ref} className="CustomButton">
+    {props.children}
+  </button>
+));
+
+// Create ref to the DOM button:
+const ref = React.createRef();
+<ButtonElement ref={ref}>Forward Ref</ButtonElement>;
+```
+
+
+
+### Q68： React 中的这三个点 ( `...`) 有什么作用？
+
+**问题**
+
+`...`在这个 React（使用 JSX）代码中做了什么，它叫什么？
+
+```js
+<Modal {...this.props} title='Modal heading' animation={false}/>
+```
+
+**回答**
+
+那是property传播符号。它是在 ES2018 中添加的（数组/可迭代的传播更早，ES2015）。
+
+例如，如果 this.props 包含`a: 1`and`b: 2` ，那么
+
+That's property spread notation. It was added in ES2018 (spread for arrays/iterables was earlier, ES2015).
+
+For instance, if this.props contained `a: 1` and `b: 2`, then
+
+```js
+<Modal {...this.props} title='Modal heading' animation={false}>
+```
+
+将与以下内容相同：
+
+```js
+<Modal a={this.props.a} b={this.props.b} title='Modal heading' animation={false}>
+```
+
+扩展表示法不仅适用于该用例，而且适用于创建具有现有对象的大部分（或全部）属性的新对象 - 当您更新状态时会出现很多情况，因为您无法修改状态直接地：
+
+```js
+this.setState(prevState => {
+    return {foo: {...prevState.foo, a: "updated"}};
+});
+```
+
+
+
+### Q69： **你如何告诉 React 在生产模式下构建，它会做什么?**
+
+通常，您会使用 Webpack 的 DefinePlugin 方法将**NODE_ENV**设置为**production**。这将删除诸如 propType 验证和额外警告之类的内容。最重要的是，缩小代码也是一个好主意，因为 React 使用 Uglify 的死代码消除功能来去除仅用于开发的代码和注释，这将大大减少包的大小。
+
+Typically you’d use Webpack’s DefinePlugin method to set **NODE_ENV** to **production**. This will strip out things like propType validation and extra warnings. On top of that, it’s also a good idea to minify your code because React uses Uglify’s dead-code elimination to strip out development only code and comments, which will drastically reduce the size of your bundle.
+
+
+
+### Q70： **在 Redux 中处理异步调用的典型中间件选择是什么？**
+
+- Redux Thunk，
+- Redux Promise，
+- Redux Saga
 
  
 
